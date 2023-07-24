@@ -4,8 +4,7 @@ from pathlib import Path
 
 
 def test_parquet_store():
-    print(Path().absolute())
-    path = Path(".")
+    path = Path(Path().absolute() / "tests" / "data")
     ps = ParquetStore(path)
     print(ps.libraries)
     lib = ps.library["path.to.symbols"]
