@@ -10,7 +10,7 @@ packages = [{include = "parquet_store"}]
 [tool.poetry.dependencies]
 python = "^3.9"
 fastparquet = "^2023.7.0"
-pandas = "^2.0.3"
+pandas = "^1.5.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
