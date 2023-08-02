@@ -44,7 +44,7 @@ class LibraryAccessor:
 
 class ParquetStore:
     def __init__(self, root_path, engine="fastparquet") -> None:
-        self.root_path = Path(root_path)
+        self.root_path = Path(root_path).expanduser()
         self.engine = engine
 
     @property
