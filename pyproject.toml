@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "parquet-store"
-version = "0.1.2"
+version = "0.1.3"
 description = "A simple datastore for parquet files"
 authors = ["femtotrader <femto.trader@gmail.com>"]
 license = "MIT"
