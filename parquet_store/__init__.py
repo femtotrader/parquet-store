@@ -21,7 +21,7 @@ class ParquetLibrary:
     def symbols(self):
         symbols = (self.root_path / self.key).glob(f"*{EXTENSION}")
         symbols = [symbol.stem for symbol in symbols]
-        return pd.Series(symbols)
+        return pd.Series(symbols, dtype="str")
 
     def _symbol_path(self, symbol):
         return self._path / f"{symbol}{EXTENSION}"
@@ -59,7 +59,7 @@ class ParquetStore:
                     lib = root.parts[n_root:]
                     lib = ".".join(lib)
                     libs.add(lib)
-        return pd.Series(list(libs))
+        return pd.Series(list(libs), dtype="str")
 
     def create_library(self, lib):
         lib = lib.replace(".", "/")
